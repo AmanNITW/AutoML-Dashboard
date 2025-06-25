@@ -1,10 +1,9 @@
 venv/
+*.pkl
+*.pdf
+*.png
 __pycache__/
-*.pyc
-.DS_Store
+*.log
 uploads/
 uploaded_data/
 models/
-*.pkl
-*.pdf
-*.log
