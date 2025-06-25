@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Single Entry Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h3>Predict Target Value (Single Entry)</h3>
+        <form action="/predict_single_entry" method="post">
+            {% for col in input_columns %}
+                <div class="form-group">
+                    <label for="{{ col }}">{{ col }}</label>
+                    <input type="text" name="{{ col }}" class="form-control" required>
+                </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+    </div>
+</body>
+</html>

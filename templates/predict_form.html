@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Single Entry Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        input[type="text"] {
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h3 class="text-center mb-4">Enter Feature Values for Single Entry Prediction</h3>
+        <form method="POST" action="/predict_single_entry">
+            {% for col in input_columns %}
+                <div class="form-group">
+                    <label for="{{ col }}">{{ col }}</label>
+                    <input type="text" class="form-control" id="{{ col }}" name="{{ col }}" placeholder="Enter value for {{ col }}" required>
+                </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-success btn-block">Predict</button>
+        </form>
+        <a href="/" class="btn btn-secondary mt-3 d-block text-center">Back to Home</a>
+    </div>
+</body>
+</html>
